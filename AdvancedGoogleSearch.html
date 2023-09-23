@@ -1,0 +1,92 @@
+<html>
+
+<head>
+    <script>
+        function SearchGoogle(query) {
+            const searchURL = `https://www.google.com/search?q=${encodeURIComponent(query)}`;
+            window.open(searchURL, "_blank");
+        }
+        function UserSearch(input, getBy) {
+            const query = (getBy = 'innerText') ? document.getElementById(input).innerText : document.getElementById(input).value;
+            SearchGoogle(query);
+        }
+        function UserSearchWithSearchString(input,searchbox,rkey) {
+            const s = document.getElementById(input).innerText
+            var rstring = document.getElementById(searchbox).value;
+            if(rstring){
+                var query = s.replace(rkey, rstring)
+            SearchGoogle(query);
+            }           
+        }
+    </script>
+</head>
+
+<body>
+    <main>
+        <ul>
+            <li>
+                <section>
+                    <h2>Movies Folders</h2>
+                    <table>
+                        <tr>
+                            <td><a href="#" onclick="UserSearch('m1','innerText')">Movies</a></td>
+                            <td><span id="m1">intitle:"index of" "(.mkv|.mp4)"</span></td>
+                        </tr>
+                        <tr>
+                            <td><a href="#" onclick="UserSearch('m2','innerText')">Movies</a></td>
+                            <td><span id="m1">index of movies"</span></td>
+                        </tr>
+                    </table>
+                </section>
+             
+            </li>
+            <li>
+                <section>
+                    <h2>Movie Search</h2>
+                    <input type="text" id="searchMovieInput" placeholder="Enter movie name">
+                    <table>
+                        <tr>
+                            <td><button onclick="UserSearchWithSearchString('mv1','searchMovieInput','{MOVIE}')">Search</button>
+                            </td>
+                            <td><span id="mv1">index of/movies {MOVIE}</span></td>
+                        </tr>
+                    </table>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <h2>Song Search</h2>                    
+                    <input type="text" id="searchSongInput" placeholder="Enter Song name">
+                    <table>
+                        <tr>
+                            <td><button onclick="UserSearchWithSearchString('s1','searchSongInput','{SONG}')">Search</button>
+                            </td>
+                            <td><span id="s1">index of/songs {SONG}</span></td>
+                        </tr>
+                         <tr>
+                            <td><button onclick="UserSearchWithSearchString('s2','searchSongInput','{SONG}')">Search</button>
+                            </td>
+                            <td><span id="s2">index of songs "{SONG}" mp3 download</span></td>
+                        </tr>                        
+                    </table>
+                </section>
+            </li>
+            <li>
+                <section>
+                    <h2>Book Search</h2>
+                    <input type="text" id="searchBookInput" placeholder="Enter Book name">
+                    <table>
+                        <tr>
+                            <td><button onclick="UserSearchWithSearchString('b1','searchBookInput','{BOOK}')">Search</button>
+                            </td>
+                            <td><span id="b1">intitle:"index of" (epub|pdf|mobi) "{BOOK}" -html -htm -php -asp</span></td>
+                        </tr>
+                    </table>
+                </section>
+            </li>
+          
+        </ul>
+    </main>
+</body>
+
+</html>
