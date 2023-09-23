@@ -1,0 +1,92 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    background-color: #000;
+    color: #00FF00;
+    font-family: Consolas, monospace;
+}
+
+a {
+    color: #dd741d;
+    text-decoration: none;
+}
+
+/* Header styles */
+header {
+    background-color: #111;
+    text-align: center;
+    padding: 20px 0;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Main content styles */
+main {
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    margin-bottom: 20px;
+}
+
+/* Section styles */
+section {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+/* Input styles */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #111;
+    border: 1px solid #00FF00;
+    border-radius: 5px;
+    color: #00FF00;
+    font-family: Consolas, monospace;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    background-color: #00FF00;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Span styles */
+span {
+    font-size: 14px;
+}
